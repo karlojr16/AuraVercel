@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { db } from '@/lib/firebase-admin';
+import { db } from '@/lib/firebase';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
 
