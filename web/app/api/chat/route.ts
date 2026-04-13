@@ -15,6 +15,8 @@ interface ChatRequestBody {
   history?: any[];
 }
 
+export const dynamic = 'force-dynamic';
+
 export async function OPTIONS(): Promise<Response> {
   return new Response(null, {
     status: 204,
