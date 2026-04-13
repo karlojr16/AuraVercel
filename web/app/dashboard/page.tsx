@@ -73,7 +73,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <nav className="p-4 bg-white border-b shadow-sm flex justify-between items-center">
-        <h1 className="text-xl font-bold text-orange-600">🤖 AuraBot Dashboard</h1>
+        <h1 className="text-xl font-bold text-orange-600">AuraBot Dashboard</h1>
         <button onClick={handleLogout} className="text-sm font-bold text-gray-500 hover:text-black">
             Cerrar Sesión
         </button>
@@ -106,25 +106,12 @@ export default function DashboardPage() {
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">3. Color del Bot</label>
-            <div className="flex items-center gap-4">
-                <input 
-                type="color" 
-                value={color}
-                onChange={(e) => setColor(e.target.value)}
-                className="h-12 w-24 cursor-pointer rounded-lg border-2 border-gray-100"
-                />
-                <span className="text-sm font-mono text-gray-500">{color}</span>
-            </div>
-          </div>
-
           <button
             onClick={handleSave}
             disabled={loading}
             className="w-full py-4 mt-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
-            {loading ? "Preparando magia... ✨" : "Generar mi Chatbot"}
+            {loading ? "Preparando magia... " : "Generar mi Chatbot"}
           </button>
         </div>
 
@@ -132,7 +119,7 @@ export default function DashboardPage() {
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-3xl"></div>
             <h2 className="text-xl font-extrabold text-green-400 mb-4 flex items-center gap-2">
-                ✅ ¡Bot listo para usarse!
+                  ¡Bot listo para usarse!
             </h2>
             <div className="bg-black/50 border border-slate-700 p-4 rounded-lg text-sm font-mono overflow-x-auto text-green-300 mb-4">
               {`<script src="${window.location.origin}/widget.js" data-bot-id="${botId}" defer></script>`}

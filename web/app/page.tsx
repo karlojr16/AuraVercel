@@ -12,7 +12,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
       {/* Header */}
       <nav className="p-4 bg-white border-b shadow-sm flex justify-between items-center">
-        <h1 className="text-xl font-bold text-orange-600">🤖 AuraBot</h1>
+        <h1 className="text-xl font-bold text-orange-600">AuraBot</h1>
         <Link href="/login" className="px-4 py-2 bg-orange-600 text-white font-medium text-sm rounded-lg hover:bg-orange-700 transition-colors">
           Iniciar Sesión
         </Link>
@@ -49,13 +49,7 @@ export default function HomePage() {
                 className="w-full p-2 border rounded text-gray-900"
                 placeholder="Nombre de tu bot..."
               />
-              <label className="block text-xs font-bold text-gray-600 uppercase mt-4">Color del Widget</label>
-              <input 
-                type="color" 
-                value={color}
-                onChange={(e) => setColor(e.target.value)}
-                className="w-full h-10 rounded cursor-pointer"
-              />
+      
             </div>
           </section>
 
@@ -90,7 +84,7 @@ export default function HomePage() {
               {/* Botón flotante simulado */}
               <div className="absolute bottom-6 right-6">
                 <div className="bg-white p-3 rounded-xl shadow-lg border text-[10px] mb-2 w-32 animate-pulse">
-                   ¡Hola! Soy <b>{botName}</b>. ¿En qué puedo ayudarte?
+                    ¡Hola! Soy <b>{botName}</b>. ¿En qué puedo ayudarte?
                 </div>
                 <div 
                   className="w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-xl text-white ml-auto"
