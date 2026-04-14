@@ -105,12 +105,15 @@ ${extractedText}
       { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
 
-  } catch (error) {
-    console.error('Gemini Error:', error);
+  } catch (error: any) {
+  console.error(' ERROR REAL:', error);
 
-    return new Response(
-      JSON.stringify({ error: 'Error interno del servidor' }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    );
-  }
+  return new Response(
+    JSON.stringify({ 
+      error: error.message || 'Error desconocido',
+      stack: error.stack || null
+    }),
+    { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+  );
+}
 }
